@@ -13,6 +13,12 @@ public class AlloUaHomePageElements extends AbstractBasePage {
 
     public static final String FOR_CUSTOMERS_DROPDOWN_A = "//a[contains(text(),'Покупцям')]";
 
+    public static final String CITY_CHOOSE_BTN = "//div[contains(@class,'mh-loc')]//button";
+
+    public static final String CITY_FIELD_INPUT = "//input[@id='city']";
+
+    public static final String CITY_AUTOCOMPLETE_DIV = "//div[contains(@class,'modal-input v_autocomplete')]";
+
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
     }
@@ -21,5 +27,15 @@ public class AlloUaHomePageElements extends AbstractBasePage {
         return waitUntilElementToBeClickable(FOR_CUSTOMERS_DROPDOWN_A);
     }
 
+    public WebElement getCityChooseBtn(){
+        return waitUntilElementToBeClickable(CITY_CHOOSE_BTN);
+    }
 
+    public WebElement getCityInputField(){
+        return waitUntilElementToBeClickable(CITY_FIELD_INPUT);
+    }
+
+    public WebElement getCityAutocompleteDiv(){
+        return waitUntilElementToBeClickable(CITY_AUTOCOMPLETE_DIV);
+    }
 }
