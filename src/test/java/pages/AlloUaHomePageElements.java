@@ -13,6 +13,8 @@ public class AlloUaHomePageElements extends AbstractBasePage {
 
     public static final String FOR_CUSTOMERS_DROPDOWN_A = "//a[contains(text(),'Покупцям')]";
 
+    public static final String DROPDOWN_BLOG_A = "//div[contains(@class,'dropdown')]//a[contains(@href,'blog')]";
+
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
     }
@@ -20,6 +22,11 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public WebElement getForCustomersDropdownBtn(){
         return waitUntilElementToBeClickable(FOR_CUSTOMERS_DROPDOWN_A);
     }
+
+    public WebElement getDropDownBlogBtn(){
+        return waitUntilElementToBeClickable(DROPDOWN_BLOG_A);
+    }
+
 
 
 }
