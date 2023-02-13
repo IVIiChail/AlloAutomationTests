@@ -7,5 +7,7 @@ public class AlloUaHomePageHelper extends AlloUaHomePageElements{
         super(driver);
     }
 
-
+    public void goToHomePage(){
+        driver.get("https://allo.ua/");
+    }
 }
