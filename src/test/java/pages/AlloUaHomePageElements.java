@@ -36,4 +36,17 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public void GoToTelegram(){
         driver.get("https://t.me/allohelp_bot");
     }
+
+    public static final String CONTENT_TITLE_H2="//h2[@class='sp-page-title sp-h2 custom-header']";
+    public static final String HEADER_BUYERS_BTN ="//a[@class='mh-button mh-button--open']";
+    public static final String BUY_PARTLY ="(//a[@href='https://allo.ua/ua/help/oplata-chastami/'])[1]";
+    public WebElement getContentTitleH2(){
+        return waitUntilElementToBeClickable(CONTENT_TITLE_H2);
+    }
+    public WebElement getBuyers(){
+        return waitUntilElementToBeClickable(HEADER_BUYERS_BTN);
+    }
+    public WebElement getBuyPartly(){
+        return waitUntilElementToBeClickable(BUY_PARTLY);
+    }
 }
