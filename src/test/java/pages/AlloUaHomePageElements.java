@@ -22,6 +22,8 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public static final String CONTENT_TITLE_H1="//h1[@class ='content__title']";
     public static final String TD_ADDRESS ="//td[@class ='table-body__address']']";
 
+    public static final String DROPDOWN_BLOG_A = "//div[contains(@class,'dropdown')]//a[contains(@href,'blog')]";
+
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
     }
@@ -50,6 +52,11 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
 
 
+
+
+    public WebElement getDropDownBlogBtn(){
+        return waitUntilElementToBeClickable(DROPDOWN_BLOG_A);
+    }
 
 
 
