@@ -1,7 +1,8 @@
 1. To clone repository run:
     - git clone https://github.com/IVIiChail/AlloAutomationTests.git
 2. Pull changes:
-    - git pull / - git fetch
+    - git checkout dev
+    - git pull
 3. Create new branch for every new task from dev:
     - git checkout dev
     - git checkout -b nameOfBranch
