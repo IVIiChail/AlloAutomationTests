@@ -9,9 +9,7 @@ public class GoToShopWithDniproCity extends AbstractBaseTest {
 @Test
     public void GoToStores(){
         AlloUaHomePageElements allo = new AlloUaHomePageElements(driver);
-        driver.navigate();
-        GoToAllo();
-        sleep(3);
+        goToAllo();
         allo.getCityButton().click();
         allo.getDnipro().click();
         allo.waitUntilUrlContainsText("https://allo.ua/ua/dnipro/");
