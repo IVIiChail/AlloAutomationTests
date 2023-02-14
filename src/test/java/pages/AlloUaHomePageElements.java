@@ -13,7 +13,6 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
 
     private static final String DROPDOWN_GUARANTY_RETURN_A = "//div[contains(@class,'dropdown')]//a[contains(@href,'warranty_and_service')]";
-
     public static final String FOR_CUSTOMERS_DROPDOWN_A = "//a[contains(text(),'Покупцям')]";
     public static final String HEADER_CITY_BTN ="//button[@data-geo-label='Київ']";
     public static final String HEADER_SWITCH_CITY = "//a[@href='https://allo.ua/ua/dnipro']";
@@ -21,30 +20,23 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public static final String LOC_LABEL="//span[@class ='mh-loc__label']";
     public static final String CONTENT_TITLE_H1="//h1[@class ='content__title']";
     public static final String TD_ADDRESS ="//td[@class ='table-body__address']']";
-
     public static final String DROPDOWN_BLOG_A = "//div[contains(@class,'dropdown')]//a[contains(@href,'blog')]";
-
     public static final String CONTACT_WITH_US_DROPDOWN_BUTTON = "//div[contains(@class,'mh-phone')]//button[contains(@class,'mh-button')]";
-
     public static final String DROPDOWN_MESSENGER_A = "//div[contains(@class,'mh-phone')]//a[descendant::span[contains(text(),'Messenger')]]";
-
     public static final String CITY_CHOOSE_BTN = "//div[contains(@class,'mh-loc')]//button";
-
     public static final String CITY_FIELD_INPUT = "//input[@id='city']";
-
     public static final String CITY_AUTOCOMPLETE_DIV = "//div[contains(@class,'modal-input v_autocomplete')]";
+    public static final String CATALOG_GOODS_FOR_CHILDREN_A = "//li[contains(@class,'mm__item')]/a[contains(@href,'tovary-dlja-detej')]";
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
     }
-
     public WebElement getForCustomersDropdownBtn(){
         return waitUntilElementToBeClickable(FOR_CUSTOMERS_DROPDOWN_A);
     }
     public WebElement getCityButton(){
         return waitUntilElementToBeClickable(HEADER_CITY_BTN);
     }
-
     public WebElement getDnipro(){
         return waitUntilElementToBeClickable(HEADER_SWITCH_CITY);
     }
@@ -60,33 +52,26 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public List<WebElement> getTdAddress(){
         return waitUntilElementsToBeClickable(TD_ADDRESS);
     }
-
-
-
-
     public WebElement getDropDownBlogBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_BLOG_A);
     }
-
-
     public WebElement getContactWithUsDropDownBtn(){
         return waitUntilElementToBeClickable(CONTACT_WITH_US_DROPDOWN_BUTTON);
     }
-
     public WebElement getDropDownMessengerBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_MESSENGER_A);
     }
-
     public WebElement getCityChooseBtn(){
         return waitUntilElementToBeClickable(CITY_CHOOSE_BTN);
     }
-
     public WebElement getCityInputField(){
         return waitUntilElementToBeClickable(CITY_FIELD_INPUT);
     }
-
     public WebElement getCityAutocompleteDiv(){
         return waitUntilElementToBeClickable(CITY_AUTOCOMPLETE_DIV);
+    }
+    public WebElement getGoodsForChildren(){
+        return waitUntilElementToBeClickable(CATALOG_GOODS_FOR_CHILDREN_A);
     }
 }
 
