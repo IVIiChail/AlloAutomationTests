@@ -19,6 +19,9 @@ import java.net.URL;
 @Slf4j
 abstract public class AbstractBaseTest extends AbstractBase{
     protected static WebDriver driver;
+    public void goToAllo(){
+        driver.get("https://allo.ua/");
+    }
     private final Dimension dimension = new Dimension(WIDTH, HEIGHT);
     private static final int WIDTH = 1680;
     private static final int HEIGHT = 1050;
