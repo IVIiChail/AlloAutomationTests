@@ -10,7 +10,7 @@ public class GoToPaymentPartly extends AbstractBaseTest
     @Test
     public void goToPaymentPartly(){
         AlloUaHomePageElements allo = new AlloUaHomePageElements(driver);
-        GoToAllo();
+        goToAllo();
         allo.getBuyers().click();
         allo.getBuyPartly().click();
         allo.waitUntilUrlContainsText("oplata-chastami/");
