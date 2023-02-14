@@ -20,5 +20,4 @@ public class GoToGuaranteeReturn extends AbstractBaseTest {
         Assert.assertTrue(urlContains("https://allo.ua/ua/warranty_and_service/"));
         Assert.assertEquals(alloUaResultPageElements.getGuaranteeAndServicePageTitle().getText(), "Гарантія та сервісні центри");
     }
-
 }
