@@ -32,6 +32,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public static final String HEADER_CATALOG_DIV = "//div[contains(@class,'ct-button')]";
     public static final String CATALOG_SMARTPHONES_AND_PHONES_A = "//li//a[contains(@href,'mobilnye-telefony-i-sredstva-svyazi')]";
 
+
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
     }
