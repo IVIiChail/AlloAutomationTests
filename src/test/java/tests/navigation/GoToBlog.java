@@ -6,18 +6,19 @@ import org.testng.annotations.Test;
 import pages.AlloUaHomePageHelper;
 import pages.AlloUaResultPageElements;
 
-public class GoToGuaranteeReturn extends AbstractBaseTest {
+public class GoToBlog extends AbstractBaseTest {
 
     @Test
-    public void goToGuaranteeReturn(){
+    public void goToBlog(){
         AlloUaHomePageHelper alloUaHomePageHelper = new AlloUaHomePageHelper(driver);
         alloUaHomePageHelper.goToHomePage();
 
         alloUaHomePageHelper.getForCustomersDropdownBtn().click();
-        alloUaHomePageHelper.getGuaranteeReturnBtn().click();
+        alloUaHomePageHelper.getDropDownBlogBtn().click();
         AlloUaResultPageElements alloUaResultPageElements = new AlloUaResultPageElements(driver);
+        alloUaResultPageElements.goToNextTab(2);
 
-        Assert.assertTrue(urlContains("https://allo.ua/ua/warranty_and_service/"));
-        Assert.assertEquals(alloUaResultPageElements.getGuaranteeAndServicePageTitle().getText(), "Гарантія та сервісні центри");
+        Assert.assertTrue(urlContains("https://blog.allo.ua/ua/golovna/"));
+        Assert.assertEquals(alloUaResultPageElements.getHeaderBlogAlloLogo().getAttribute("alt"),"Блог АЛЛО");
     }
 }
