@@ -14,38 +14,45 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
 
     private static final String DROPDOWN_GUARANTY_RETURN_A = "//div[contains(@class,'dropdown')]//a[contains(@href,'warranty_and_service')]";
-    public static final String FOR_CUSTOMERS_DROPDOWN_A = "//a[contains(text(),'Покупцям')]";
-    public static final String HEADER_MIDDLE_DISCOUNT = "(//a[@href='https://allo.ua/ua/events-and-discounts/'])[1]";
-    public static final String LOGO_BTN ="(//img[@alt='Интернет-Магазин Allo'])[1]";
-    public static final String HEADER_DISCOUNT_BTN ="(//a[@href='https://allo.ua/ua/events-and-discounts/'])[1]";
-    public static final String PROMO_LIST_TITLE = "//h1[@class='promo-list__title']";
-    public static final String HEADER_BUYERS_BTN ="//a[@class='mh-button mh-button--open']";
-    public static final String BUY_PARTLY ="(//a[@href='https://allo.ua/ua/help/oplata-chastami/'])[1]";
-    public static final String CONTENT_TITLE_H2="//h2[@class='sp-page-title sp-h2 custom-header']";
-    public static final String HEADER_CITY_BTN ="//button[@data-geo-label='Київ']";
-    public static final String HEADER_SWITCH_CITY = "//a[@href='https://allo.ua/ua/dnipro']";
-    public static final String HEADER_STORES_BTN ="(//a[@href='https://allo.ua/ua/dnipro/offline_stores/'])[1]";
-    public static final String LOC_LABEL="//span[@class ='mh-loc__label']";
-    public static final String CONTENT_TITLE_H1="//h1[@class ='content__title']";
-    public static final String TD_ADDRESS ="//td[@class ='table-body__address']";
-    public static final String DROPDOWN_BLOG_A = "//div[contains(@class,'dropdown')]//a[contains(@href,'blog')]";
-    public static final String CONTACT_WITH_US_DROPDOWN_BUTTON = "//div[contains(@class,'mh-phone')]//button[contains(@class,'mh-button')]";
-    public static final String DROPDOWN_MESSENGER_A = "//div[contains(@class,'mh-phone')]//a[descendant::span[contains(text(),'Messenger')]]";
-    public static final String CITY_CHOOSE_BTN = "//div[contains(@class,'mh-loc')]//button";
-    public static final String CITY_FIELD_INPUT = "//input[@id='city']";
-    public static final String CITY_AUTOCOMPLETE_DIV = "//div[contains(@class,'modal-input v_autocomplete')]";
-    public static final String CATALOG_HEALTH_AND_SPORT_A = "//li//a[contains(@href,'https://allo.ua/ua/sport-i-zdorov-e/')]";
-    public static final String CATALOG_GOODS_FOR_CHILDREN_A = "//li[contains(@class,'mm__item')]/a[contains(@href,'tovary-dlja-detej')]";
-    public static final String HEADER_CATALOG_DIV = "//div[contains(@class,'ct-button')]";
-    public static final String CATALOG_SMARTPHONES_AND_PHONES_A = "//li//a[contains(@href,'mobilnye-telefony-i-sredstva-svyazi')]";
-    public static final String HEADER_CONTACTS_US = "//span[@class='mh-phone__title']";
-    public static final String TELEGRAM_BTN = "(//span[@class='contacts__label'])[2]";
-    public static final String ALLO_HELP_BOT ="//div[contains(text(),'@allohelp_bot')]";
+    private static final String FOR_CUSTOMERS_DROPDOWN_A = "//a[contains(text(),'Покупцям')]";
+    private static final String HEADER_MIDDLE_DISCOUNT = "(//a[@href='https://allo.ua/ua/events-and-discounts/'])[1]";
+    private static final String LOGO_BTN ="(//img[@alt='Интернет-Магазин Allo'])[1]";
+    private static final String HEADER_DISCOUNT_BTN ="(//a[@href='https://allo.ua/ua/events-and-discounts/'])[1]";
+    private static final String PROMO_LIST_TITLE = "//h1[@class='promo-list__title']";
+    private static final String HEADER_BUYERS_BTN ="//a[@class='mh-button mh-button--open']";
+    private static final String BUY_PARTLY ="(//a[@href='https://allo.ua/ua/help/oplata-chastami/'])[1]";
+    private static final String CONTENT_TITLE_H2="//h2[@class='sp-page-title sp-h2 custom-header']";
+    private static final String HEADER_CITY_BTN ="//button[@data-geo-label='Київ']";
+    private static final String HEADER_SWITCH_CITY = "//a[@href='https://allo.ua/ua/dnipro']";
+    private static final String HEADER_STORES_BTN ="(//a[@href='https://allo.ua/ua/dnipro/offline_stores/'])[1]";
+    private static final String LOC_LABEL="//span[@class ='mh-loc__label']";
+    private static final String CONTENT_TITLE_H1="//h1[@class ='content__title']";
+    private static final String TD_ADDRESS ="//td[@class ='table-body__address']";
+    private static final String DROPDOWN_BLOG_A = "//div[contains(@class,'dropdown')]//a[contains(@href,'blog')]";
+    private static final String CONTACT_WITH_US_DROPDOWN_BUTTON = "//div[contains(@class,'mh-phone')]//button[contains(@class,'mh-button')]";
+    private static final String DROPDOWN_MESSENGER_A = "//div[contains(@class,'mh-phone')]//a[descendant::span[contains(text(),'Messenger')]]";
+    private static final String CITY_CHOOSE_BTN = "//div[contains(@class,'mh-loc')]//button";
+    private static final String CITY_FIELD_INPUT = "//input[@id='city']";
+    private static final String CITY_AUTOCOMPLETE_DIV = "//div[contains(@class,'modal-input v_autocomplete')]";
+    private static final String CATALOG_HEALTH_AND_SPORT_A = "//li//a[contains(@href,'https://allo.ua/ua/sport-i-zdorov-e/')]";
+    private static final String CATALOG_GOODS_FOR_CHILDREN_A = "//li[contains(@class,'mm__item')]/a[contains(@href,'tovary-dlja-detej')]";
+    private static final String HEADER_CATALOG_DIV = "//div[contains(@class,'ct-button')]";
+    private static final String CATALOG_SMARTPHONES_AND_PHONES_A = "//li//a[contains(@href,'mobilnye-telefony-i-sredstva-svyazi')]";
+    private static final String HEADER_CONTACTS_US = "//span[@class='mh-phone__title']";
+    private static final String TELEGRAM_BTN = "(//span[@class='contacts__label'])[2]";
+    private static final String ALLO_HELP_BOT ="//div[contains(text(),'@allohelp_bot')]";
     private static final String CATALOG_BTN = "//div[@class='mh-catalog-btn']";
-    public static final String HOUSEHOLD_APP_BTN = "//a[@href='https://allo.ua/ua/bytovaya-tehnika/']";
-    public static final String REFRIGERATORS_BTN ="(//a[@href='https://allo.ua/ua/holodilniki/'])[1]";
-    public static final String PRODUCT_CONTENT ="//div[@class= 'product-card__content']";
-    public static final String LINK_ALLO_EXCHENGE = "//a[@href='https://allo.ua/ua/tradein/']";
+    private static final String HOUSEHOLD_APP_BTN = "//a[@href='https://allo.ua/ua/bytovaya-tehnika/']";
+    private static final String REFRIGERATORS_BTN ="(//a[@href='https://allo.ua/ua/holodilniki/'])[1]";
+    private static final String PRODUCT_CONTENT ="//div[@class= 'product-card__content']";
+    private static final String REGISTRATION_EMAIL_INPUT = "//input[contains(@id,'register-email')]";
+    private static final String REGISTRATION_PASSWORD_INPUT = "//input[contains(@id,'vregister-password')]";
+    private static final String REGISTRATION_SUBMIT_BTN = "//button[contains(@class,'modal-submit-button')]";
+    private static final String REGISTRATION_ERROR_EMAIL_SPAN = "//div[child::label[contains(text(),'пошта')]]//span";
+    private static final String REGISTRATION_ERROR_PHONE_SPAN = "//div[child::label[contains(text(),'Телефон')]]//span";
+    private static final String PROFILE_BTN = "//div[contains(@class,'profile')]//button[contains(@class,'mh-button')]";
+    private static final String REGISTRATION_BTN = "//li[contains(text(),'Реєстрація')]";
+    private static final String LINK_ALLO_EXCHENGE = "//a[@href='https://allo.ua/ua/tradein/']";
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
@@ -137,10 +144,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public AlloUaHomePageElements moveOnCategoryHousehold(){
         moveCursor(moveHouseholdApp());
         return this;
-
     }
-
-
     public WebElement getContactsUs(){
         return waitUntilElementToBeClickable(HEADER_CONTACTS_US);
     }
@@ -153,7 +157,27 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public void GoToTelegram(){
         driver.get("https://t.me/allohelp_bot");
     }
-
+    public WebElement getProfileBtn(){
+        return waitUntilElementToBeClickable(PROFILE_BTN);
+    }
+    public WebElement getRegistrationEmailInput(){
+        return waitUntilElementToBeClickable(REGISTRATION_EMAIL_INPUT);
+    }
+    public WebElement getRegistrationBtn(){
+        return waitUntilElementToBeClickable(REGISTRATION_BTN);
+    }
+    public WebElement getRegistrationPasswordInput(){
+        return waitUntilElementToBeClickable(REGISTRATION_PASSWORD_INPUT);
+    }
+    public WebElement getRegistrationSubmitBtn(){
+        return waitUntilElementToBeClickable(REGISTRATION_SUBMIT_BTN);
+    }
+    public WebElement getRegistrationPhoneErrorSpan(){
+        return waitUntilElementToBeClickable(REGISTRATION_ERROR_PHONE_SPAN);
+    }
+    public WebElement getRegistrationEmailErrorSpan(){
+        return waitUntilElementToBeClickable(REGISTRATION_ERROR_EMAIL_SPAN);
+    }
     public WebElement getLinkAlloExchange() {
         return waitUntilVisibilityOfElementLocated(LINK_ALLO_EXCHENGE);
     }
