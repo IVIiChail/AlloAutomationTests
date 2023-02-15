@@ -19,4 +19,5 @@ public class AlloUaHomePageHelper extends AlloUaHomePageElements{
         getCityInputField().sendKeys(Keys.ENTER);
         getCityAutocompleteDiv().click();
     }
+
 }
