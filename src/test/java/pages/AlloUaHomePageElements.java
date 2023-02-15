@@ -14,6 +14,8 @@ public class AlloUaHomePageElements extends AbstractBasePage {
 
     private static final String DROPDOWN_GUARANTY_RETURN_A = "//div[contains(@class,'dropdown')]//a[contains(@href,'warranty_and_service')]";
     public static final String FOR_CUSTOMERS_DROPDOWN_A = "//a[contains(text(),'Покупцям')]";
+    public static final String HEADER_DISCOUNT_BTN ="(//a[@href='https://allo.ua/ua/events-and-discounts/'])[1]";
+    public static final String PROMO_LIST_TITLE = "//h1[@class='promo-list__title']";
     public static final String HEADER_BUYERS_BTN ="//a[@class='mh-button mh-button--open']";
     public static final String BUY_PARTLY ="(//a[@href='https://allo.ua/ua/help/oplata-chastami/'])[1]";
     public static final String CONTENT_TITLE_H2="//h2[@class='sp-page-title sp-h2 custom-header']";
@@ -39,6 +41,12 @@ public class AlloUaHomePageElements extends AbstractBasePage {
 
     public WebElement getForCustomersDropdownBtn(){
         return waitUntilElementToBeClickable(FOR_CUSTOMERS_DROPDOWN_A);
+    }
+    public WebElement getDiscount(){
+        return waitUntilElementToBeClickable((HEADER_DISCOUNT_BTN));
+    }
+    public  WebElement getPromoTiltle(){
+        return waitUntilVisibilityOfElementLocated(PROMO_LIST_TITLE);
     }
     public WebElement getBuyers(){
         return waitUntilElementToBeClickable(HEADER_BUYERS_BTN);
@@ -92,5 +100,4 @@ public class AlloUaHomePageElements extends AbstractBasePage {
         return waitUntilElementToBeClickable(CATALOG_SMARTPHONES_AND_PHONES_A);
     }
 }
-
 
