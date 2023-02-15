@@ -12,7 +12,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
         super(driver);
     }
 
-    private static final String DROPDOWN_GUARANTY_RETURN_A = "//div[contains(@class,'dropdown')]//a[contains(@href,'warranty_and_service')]"
+    private static final String DROPDOWN_GUARANTY_RETURN_A = "//div[contains(@class,'dropdown')]//a[contains(@href,'warranty_and_service')]";
     public static final String FOR_CUSTOMERS_DROPDOWN_A = "//a[contains(text(),'Покупцям')]";
     public static final String HEADER_BUYERS_BTN ="//a[@class='mh-button mh-button--open']";
     public static final String BUY_PARTLY ="(//a[@href='https://allo.ua/ua/help/oplata-chastami/'])[1]";
@@ -29,6 +29,8 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public static final String CITY_CHOOSE_BTN = "//div[contains(@class,'mh-loc')]//button";
     public static final String CITY_FIELD_INPUT = "//input[@id='city']";
     public static final String CITY_AUTOCOMPLETE_DIV = "//div[contains(@class,'modal-input v_autocomplete')]";
+    public static final String HEADER_CATALOG_DIV = "//div[contains(@class,'ct-button')]";
+    public static final String CATALOG_SMARTPHONES_AND_PHONES_A = "//li//a[contains(@href,'mobilnye-telefony-i-sredstva-svyazi')]";
 
 
     public WebElement getGuaranteeReturnBtn(){
@@ -82,6 +84,12 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public WebElement getCityAutocompleteDiv(){
         return waitUntilElementToBeClickable(CITY_AUTOCOMPLETE_DIV);
+    }
+    public WebElement getHeaderCatalogBtn(){
+        return waitUntilElementToBeClickable(HEADER_CATALOG_DIV);
+    }
+    public WebElement getCatalogSmartphonesAndPhonesBtn(){
+        return waitUntilElementToBeClickable(CATALOG_SMARTPHONES_AND_PHONES_A);
     }
 }
 
