@@ -31,6 +31,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public static final String CITY_CHOOSE_BTN = "//div[contains(@class,'mh-loc')]//button";
     public static final String CITY_FIELD_INPUT = "//input[@id='city']";
     public static final String CITY_AUTOCOMPLETE_DIV = "//div[contains(@class,'modal-input v_autocomplete')]";
+    public static final String CATALOG_GOODS_FOR_CHILDREN_A = "//li[contains(@class,'mm__item')]/a[contains(@href,'tovary-dlja-detej')]";
     public static final String HEADER_CATALOG_DIV = "//div[contains(@class,'ct-button')]";
     public static final String CATALOG_SMARTPHONES_AND_PHONES_A = "//li//a[contains(@href,'mobilnye-telefony-i-sredstva-svyazi')]";
 
@@ -38,7 +39,6 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
     }
-
     public WebElement getForCustomersDropdownBtn(){
         return waitUntilElementToBeClickable(FOR_CUSTOMERS_DROPDOWN_A);
     }
@@ -98,6 +98,9 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public WebElement getCatalogSmartphonesAndPhonesBtn(){
         return waitUntilElementToBeClickable(CATALOG_SMARTPHONES_AND_PHONES_A);
+    }
+    public WebElement getGoodsForChildren(){
+        return waitUntilElementToBeClickable(CATALOG_GOODS_FOR_CHILDREN_A);
     }
 }
 
