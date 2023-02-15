@@ -1,8 +1,6 @@
 package pages;
 
 import base.AbstractBasePage;
-import base.AbstractBaseTest;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -55,6 +53,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String LINK_ALLO_EXCHENGE = "//a[@href='https://allo.ua/ua/tradein/']";
     private static final String FACEBOOK_ICN ="//a[@href='https://www.facebook.com/allo']";
     private static final String ALLO_USERNAME ="(//h2[@class='x1heor9g x1qlqyl8 x1pd3egz x1a2a7pz x193iq5w xeuugli'])[1]";
+    private static final String LINK_ALLO_MONEY = "//div[@class='mh-links']//a[@href='https://allo.ua/ua/loyalty-program/']";
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
@@ -158,6 +157,9 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public void GoToTelegram(){
         driver.get("https://t.me/allohelp_bot");
+    }
+    public WebElement getLinkAlloMoney() {
+        return waitUntilElementToBeClickable(LINK_ALLO_MONEY);
     }
     public WebElement getProfileBtn(){
         return waitUntilElementToBeClickable(PROFILE_BTN);
