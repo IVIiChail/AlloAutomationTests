@@ -9,7 +9,7 @@ public class ChooseRefrigerators extends AbstractBaseTest {
     @Test
     public void chooseRefrigerators(){
         AlloUaHomePageElements allo = new AlloUaHomePageElements(driver);
-        GoToAllo();
+        goToAllo();
         allo.getCatalog().click();
         allo.moveOnCategoryHousehold();
         allo.getRefrigerators().click();
