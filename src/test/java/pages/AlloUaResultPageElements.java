@@ -19,6 +19,7 @@ public class AlloUaResultPageElements extends AbstractBasePage {
     private static final String PLAYPENS_A = "//li[contains(@class,'portal')]//a[contains(text(),'Манежі')]";
     private static final String APPSTORE_ALLO_APP_TITLE = "//h1[contains(@class,'product-header__title')]";
     private static final String GET_RESAULT_LINKALLOEXCHANHE = "//div[@class='mh-links']//a[@href='https://allo.ua/ua/tradein/']";
+    private static final String INSTAGRAM_ALLO_TITLE_H1 = "//h2";
 
     public WebElement getGuaranteeAndServicePageTitle(){
         return waitUntilElementToBeClickable(GUARANTEE_AND_SERVICE_PAGE_TITLE_H4);
@@ -42,4 +43,7 @@ public class AlloUaResultPageElements extends AbstractBasePage {
         return waitUntilElementToBeClickable(APPSTORE_ALLO_APP_TITLE);
     }
     public WebElement getResault_LinkAlloExchenge() {return waitUntilVisibilityOfElementLocated(GET_RESAULT_LINKALLOEXCHANHE);}
+    public WebElement getInstagramTitle() {
+        return waitUntilElementToBeClickable(INSTAGRAM_ALLO_TITLE_H1);
+    }
 }
