@@ -9,7 +9,7 @@ public class GoToHomeByLogo extends AbstractBaseTest {
     @Test
     public void goToHomePageByLogo(){
         AlloUaHomePageElements allo = new AlloUaHomePageElements(driver);
-        GoToAllo();
+        goToAllo();
         allo.getDiscountMiddle().click();
         allo.returnToHomePageByLogo().click();
 

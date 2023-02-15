@@ -27,7 +27,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public static final String HEADER_STORES_BTN ="(//a[@href='https://allo.ua/ua/dnipro/offline_stores/'])[1]";
     public static final String LOC_LABEL="//span[@class ='mh-loc__label']";
     public static final String CONTENT_TITLE_H1="//h1[@class ='content__title']";
-    public static final String TD_ADDRESS ="//td[@class ='table-body__address']']";
+    public static final String TD_ADDRESS ="//td[@class ='table-body__address']";
     public static final String DROPDOWN_BLOG_A = "//div[contains(@class,'dropdown')]//a[contains(@href,'blog')]";
     public static final String CONTACT_WITH_US_DROPDOWN_BUTTON = "//div[contains(@class,'mh-phone')]//button[contains(@class,'mh-button')]";
     public static final String DROPDOWN_MESSENGER_A = "//div[contains(@class,'mh-phone')]//a[descendant::span[contains(text(),'Messenger')]]";
