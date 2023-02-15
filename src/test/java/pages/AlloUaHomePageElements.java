@@ -45,6 +45,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public static final String HOUSEHOLD_APP_BTN = "//a[@href='https://allo.ua/ua/bytovaya-tehnika/']";
     public static final String REFRIGERATORS_BTN ="(//a[@href='https://allo.ua/ua/holodilniki/'])[1]";
     public static final String PRODUCT_CONTENT ="//div[@class= 'product-card__content']";
+    public static final String LINK_ALLO_EXCHENGE = "//a[@href='https://allo.ua/ua/tradein/']";
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
@@ -151,6 +152,10 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public void GoToTelegram(){
         driver.get("https://t.me/allohelp_bot");
+    }
+
+    public WebElement getLinkAlloExchange() {
+        return waitUntilVisibilityOfElementLocated(LINK_ALLO_EXCHENGE);
     }
 }
 
