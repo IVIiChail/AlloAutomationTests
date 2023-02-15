@@ -23,6 +23,7 @@ public class AlloUaResultPageElements extends AbstractBasePage {
     private static final String TITLE_ALLO_BOT = "//h1[contains(text(),'ALLO bot')]";
     private static final String PAGE_LOGO_NAME = "//span[@dir='auto']";
 
+    private static final String LIST_ELEMENTS_SAVE_GLASSES = "//div[@class='products-layout__item without-options-1 without-options-3 without-options-4']";
     public WebElement getGuaranteeAndServicePageTitle(){
         return waitUntilElementToBeClickable(GUARANTEE_AND_SERVICE_PAGE_TITLE_H4);
     }
@@ -54,4 +55,8 @@ public class AlloUaResultPageElements extends AbstractBasePage {
     public WebElement getLogoLogoName() {
         return waitUntilElementToBeClickable(PAGE_LOGO_NAME);
     }
+    public List<WebElement> getListResultsSaveGlasses() {
+        return waitUntilElementsToBeClickable(LIST_ELEMENTS_SAVE_GLASSES);
+    }
+
 }
