@@ -20,6 +20,7 @@ public class AlloUaResultPageElements extends AbstractBasePage {
     private static final String APPSTORE_ALLO_APP_TITLE = "//h1[contains(@class,'product-header__title')]";
     private static final String GET_RESAULT_LINKALLOEXCHANHE = "//div[@class='mh-links']//a[@href='https://allo.ua/ua/tradein/']";
     private static final String INSTAGRAM_ALLO_TITLE_H1 = "//h2";
+    private static final String TITLE_ALLO_BOT = "//h1[contains(text(),'ALLO bot')]";
 
     public WebElement getGuaranteeAndServicePageTitle(){
         return waitUntilElementToBeClickable(GUARANTEE_AND_SERVICE_PAGE_TITLE_H4);
@@ -45,5 +46,8 @@ public class AlloUaResultPageElements extends AbstractBasePage {
     public WebElement getResault_LinkAlloExchenge() {return waitUntilVisibilityOfElementLocated(GET_RESAULT_LINKALLOEXCHANHE);}
     public WebElement getInstagramTitle() {
         return waitUntilElementToBeClickable(INSTAGRAM_ALLO_TITLE_H1);
+    }
+    public WebElement getTitleAllo_Bot() {
+        return waitUntilVisibilityOfElementLocated(TITLE_ALLO_BOT);
     }
 }
