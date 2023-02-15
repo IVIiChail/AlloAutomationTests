@@ -96,10 +96,12 @@ abstract public class AbstractBasePage extends AbstractBase {
     }
 
     protected void moveCursor(WebElement element) {
+        Actions actions = new Actions(driver);
         actions.moveToElement(element).build().perform();
     }
 
     protected void doubleClick(WebElement element) {
         actions.doubleClick(element).build().perform();
     }
+
 }

@@ -13,6 +13,7 @@ import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import pages.AlloUaHomePageHelper;
 
 import java.net.URL;
 
@@ -77,4 +78,5 @@ abstract public class AbstractBaseTest extends AbstractBase{
     public void scrollToElement(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
+
 }
