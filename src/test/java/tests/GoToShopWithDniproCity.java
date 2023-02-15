@@ -19,5 +19,6 @@ public class GoToShopWithDniproCity extends AbstractBaseTest {
         Assert.assertEquals(allo.getContentTitleH1().getText(),"Адреса магазинів АЛЛО у Дніпрі");
         Assert.assertTrue(allo.getLocLabel().isEnabled());
         Assert.assertTrue(allo.getTdAddress().size()>1);
+        //розмір це наявність таких елементів на сторінці
     }
 }

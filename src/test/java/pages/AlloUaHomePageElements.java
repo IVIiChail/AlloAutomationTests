@@ -1,6 +1,7 @@
 package pages;
 
 import base.AbstractBasePage;
+import base.AbstractBaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,6 +41,10 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public static final String HEADER_CONTACTS_US = "//span[@class='mh-phone__title']";
     public static final String TELEGRAM_BTN = "(//span[@class='contacts__label'])[2]";
     public static final String ALLO_HELP_BOT ="//div[contains(text(),'@allohelp_bot')]";
+    private static final String CATALOG_BTN = "//div[@class='mh-catalog-btn']";
+    public static final String HOUSEHOLD_APP_BTN = "//a[@href='https://allo.ua/ua/bytovaya-tehnika/']";
+    public static final String REFRIGERATORS_BTN ="(//a[@href='https://allo.ua/ua/holodilniki/'])[1]";
+    public static final String PRODUCT_CONTENT ="//div[@class= 'product-card__content']";
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
@@ -116,7 +121,23 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public WebElement returnToHomePageByLogo(){
         return waitUntilElementToBeClickable(LOGO_BTN);
     }
+    public WebElement getCatalog(){
+        return waitUntilElementToBeClickable(CATALOG_BTN);
+    }
+    public WebElement moveHouseholdApp(){
+        return waitUntilElementToBeClickable(HOUSEHOLD_APP_BTN);
+    }
+    public WebElement getRefrigerators(){
+        return waitUntilElementToBeClickable(REFRIGERATORS_BTN);
+    }
+    public WebElement getProductRefrigerators(){
+        return waitUntilVisibilityOfElementLocated(PRODUCT_CONTENT);
+    }
+    public AlloUaHomePageElements moveOnCategoryHousehold(){
+        moveCursor(moveHouseholdApp());
+        return this;
 
+    }
 
 
     public WebElement getContactsUs(){

@@ -10,7 +10,7 @@ public class GoToTelegram extends AbstractBaseTest{
         public void goToTelegram(){
             AlloUaHomePageElements allo = new AlloUaHomePageElements(driver);
             driver.navigate();
-            GoToAllo();
+            goToAllo();
             allo.getContactsUs().click();
             allo.getTelegram().click();
             allo.GoToTelegram();
