@@ -55,6 +55,8 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String PLAYMARKET_ICN ="//a[@class='footer-apps__link footer-apps__link--playmarket']";
     private static final String FACEBOOK_ICN ="//a[@href='https://www.facebook.com/allo']";
     private static final String ALLO_USERNAME ="(//h2[@class='x1heor9g x1qlqyl8 x1pd3egz x1a2a7pz x193iq5w xeuugli'])[1]";
+    private static final String OFFICIAL_REPSENT ="//h3[contains(text(),'Офіційні представники')]";
+    private static final String ADDITIONAL_SECTION ="(//ul[@class='additional-section__list'])[2]";
     private static final String AUDIO_ICON ="(//a[@href='https://allo.ua/ua/naushniki-i-akustika/'])[1]";
     private static final String WIRELESS_BTN ="(//a[@href='https://allo.ua/ua/naushniki/tip_podkljuchenija_naushniki-besprovodnoe/'])[2]";
     private static final String PRODUCT_CARD ="//a[@class='product-card__title']";
@@ -211,6 +213,12 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public void goToFacebook(){
         driver.get("https://www.facebook.com/allo");
+    }
+    public WebElement getOfficailRepresent(){
+        return waitUntilVisibilityOfElementLocated(OFFICIAL_REPSENT);
+    }
+    public WebElement getRepresentations(){
+        return waitUntilVisibilityOfElementLocated(ADDITIONAL_SECTION);
     }
     public WebElement moveAudio(){
         return waitUntilVisibilityOfElementLocated(AUDIO_ICON);
