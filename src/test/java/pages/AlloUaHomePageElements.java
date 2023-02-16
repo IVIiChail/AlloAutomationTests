@@ -55,6 +55,8 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String FACEBOOK_ICN ="//a[@href='https://www.facebook.com/allo']";
     private static final String ALLO_USERNAME ="(//h2[@class='x1heor9g x1qlqyl8 x1pd3egz x1a2a7pz x193iq5w xeuugli'])[1]";
     private static final String LINK_ALLO_MONEY = "//div[@class='mh-links']//a[@href='https://allo.ua/ua/loyalty-program/']";
+    private static final String LINK_SITE_CONDITIONS = "//a[@href='https://allo.ua/ua/terms_of_use/']";
+    private static final String HEADER_NAME_SITE_CONDITIONS = "//h1[@class='sp-title-h1 page-gotham-header header-custom-marketplace']";
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
@@ -197,6 +199,12 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public void goToFacebook(){
         driver.get("https://www.facebook.com/allo");
+    }
+    public WebElement getLinkSiteConditions() {
+        return waitUntilVisibilityOfElementLocated(LINK_SITE_CONDITIONS);
+    }
+    public WebElement getHeaderNameSiteCondotions() {
+        return waitUntilVisibilityOfElementLocated(HEADER_NAME_SITE_CONDITIONS);
     }
 }
 
