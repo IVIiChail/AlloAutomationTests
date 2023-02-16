@@ -1,8 +1,7 @@
 package pages;
 
 import base.AbstractBaseTest;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 
 public class AlloUaHomePageHelper extends AlloUaHomePageElements{
     public AlloUaHomePageHelper(WebDriver driver) {
@@ -13,8 +12,6 @@ public class AlloUaHomePageHelper extends AlloUaHomePageElements{
         driver.get("https://allo.ua/");
     }
 
-
-
     public void chooseSearchedCity(String city){
         getCityChooseBtn().click();
         getCityInputField().sendKeys(city);
@@ -22,5 +19,4 @@ public class AlloUaHomePageHelper extends AlloUaHomePageElements{
         getCityInputField().sendKeys(Keys.ENTER);
         getCityAutocompleteDiv().click();
     }
-
 }

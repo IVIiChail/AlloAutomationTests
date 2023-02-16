@@ -43,6 +43,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String HOUSEHOLD_APP_BTN = "//a[@href='https://allo.ua/ua/bytovaya-tehnika/']";
     private static final String REFRIGERATORS_BTN ="(//a[@href='https://allo.ua/ua/holodilniki/'])[1]";
     private static final String PRODUCT_CONTENT ="//div[@class= 'product-card__content']";
+    private static final String DOWNLOAD_WITH_APPSTORE_A = "//a[contains(@class,'appstore')]";
     private static final String REGISTRATION_EMAIL_INPUT = "//input[contains(@id,'register-email')]";
     private static final String REGISTRATION_PASSWORD_INPUT = "//input[contains(@id,'vregister-password')]";
     private static final String REGISTRATION_SUBMIT_BTN = "//button[contains(@class,'modal-submit-button')]";
@@ -157,6 +158,9 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public void GoToTelegram(){
         driver.get("https://t.me/allohelp_bot");
+    }
+    public WebElement getDownloadWithAppStoreBtn(){
+        return waitUntilElementToBeClickable(DOWNLOAD_WITH_APPSTORE_A);
     }
     public WebElement getLinkAlloMoney() {
         return waitUntilElementToBeClickable(LINK_ALLO_MONEY);
