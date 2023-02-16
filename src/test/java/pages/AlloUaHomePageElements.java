@@ -55,6 +55,9 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String PLAYMARKET_ICN ="//a[@class='footer-apps__link footer-apps__link--playmarket']";
     private static final String FACEBOOK_ICN ="//a[@href='https://www.facebook.com/allo']";
     private static final String ALLO_USERNAME ="(//h2[@class='x1heor9g x1qlqyl8 x1pd3egz x1a2a7pz x193iq5w xeuugli'])[1]";
+    private static final String AUDIO_ICON ="(//a[@href='https://allo.ua/ua/naushniki-i-akustika/'])[1]";
+    private static final String WIRELESS_BTN ="(//a[@href='https://allo.ua/ua/naushniki/tip_podkljuchenija_naushniki-besprovodnoe/'])[2]";
+    private static final String PRODUCT_CARD ="//a[@class='product-card__title']";
     private static final String SEARCH_FIELD ="//input[@id='search-form__input']";
     private static final String SEARCH_BTN ="//button[@class='search-form__submit-button']";
     private static final String CATALOG_EMPTY ="//p[@class='v-catalog__empty']";
@@ -209,6 +212,20 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public void goToFacebook(){
         driver.get("https://www.facebook.com/allo");
     }
+    public WebElement moveAudio(){
+        return waitUntilVisibilityOfElementLocated(AUDIO_ICON);
+    }
+    public AlloUaHomePageElements moveOnCategoryAudio(){
+        moveCursor(moveAudio());
+        return this;
+    }
+    public WebElement getWireless(){
+        return waitUntilElementToBeClickable(WIRELESS_BTN);
+    }
+    public WebElement productWireless(){
+        return waitUntilVisibilityOfElementLocated(PRODUCT_CARD);
+    }
+
     public WebElement getSearchField(){
         return waitUntilElementToBeClickable(SEARCH_FIELD);
     }
