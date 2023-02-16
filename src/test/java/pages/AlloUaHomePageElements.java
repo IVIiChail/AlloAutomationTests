@@ -66,6 +66,8 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String TIKTOK_ICN ="//a[@aria-label='tiktok']";
     private static final String TT_ALLOUSER ="//h2[@class='tiktok-t89rw6-H2ShareTitle ekmpd5l5']";
     private static final String LINK_ALLO_MONEY = "//div[@class='mh-links']//a[@href='https://allo.ua/ua/loyalty-program/']";
+    private static final String FIELD_RESULT_LOGIN_OPEN = "//div[@type='login']//div[@class='validation-advice v-validation-error']";
+    private static final String FIED_RESULT_PASSWORD_OPEN = "//div[@class='modal-input validation-error'][last()]//div[@class='validation-advice v-validation-error']";
     private static final String SEARCH_FIELD_HOME_PAGE_ALLO = "//input[@id='search-form__input']";
     private static final String BTN_SEARCH_ON_HOME_PAGE_ALLO = "//button[@type='submit']";
     private static final String RESALTS_SEARCH_ELEMENTS_SAMSUNG = "//a[@class='product-card__title']";
@@ -360,6 +362,12 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public WebElement getNameAppGallery() {
         return waitUntilVisibilityOfElementLocated(PAGE_NAME_APP_GALlERY);
+    }
+    public WebElement getField_Result_Login_Open() {
+        return waitUntilVisibilityOfElementLocated(FIELD_RESULT_LOGIN_OPEN);
+    }
+    public WebElement getField_Result_Password_Open() {
+        return waitUntilVisibilityOfElementLocated(FIED_RESULT_PASSWORD_OPEN);
     }
 }
 
