@@ -63,7 +63,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String SEARCH_FIELD ="//input[@id='search-form__input']";
     private static final String SEARCH_BTN ="//button[@class='search-form__submit-button']";
     private static final String CATALOG_EMPTY ="//p[@class='v-catalog__empty']";
-    public static final String TIKTOK_ICN ="//a[@aria-label='tiktok']";
+    private static final String TIKTOK_ICN ="//a[@aria-label='tiktok']";
     private static final String TT_ALLOUSER ="//h2[@class='tiktok-t89rw6-H2ShareTitle ekmpd5l5']";
     private static final String LINK_ALLO_MONEY = "//div[@class='mh-links']//a[@href='https://allo.ua/ua/loyalty-program/']";
     private static final String FOOTER_INSTAGRAM_A = "//a[contains(@href,'instagram')]";
@@ -71,6 +71,9 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String LOGIN_PASSWORD_INPUT = "//input[contains(@id,'login-password')]";
     private static final String LOGIN_SUBMIT_BTN = "//button[contains(@class,'modal-submit-button')]";
     private static final String LOGIN_ERROR_SPAN = "//div[contains(@class,'validation-error')]//span";
+    private static final String FIRST_ELEMENT_TOP_SALES_BUY_BTN ="(//div[contains(@class,'buy-box')]//button)[1]";
+    private static final String CART_BTN ="//div[contains(@class,'cart')]//button";
+    private static final String LIST_CART_PRODUCT_ITEM_LI ="//div[contains(@class,'products__container')]//li[contains(@class,'list_item')]";
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
@@ -269,6 +272,15 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public WebElement getLoginErrorSpan(){
         return waitUntilElementToBeClickable(LOGIN_ERROR_SPAN);
+    }
+    public WebElement getFirstElementTopSalesBuyBtn(){
+        return waitUntilElementToBeClickable(FIRST_ELEMENT_TOP_SALES_BUY_BTN);
+    }
+    public WebElement getCartBtn(){
+        return waitUntilElementToBeClickable(CART_BTN);
+    }
+    public List<WebElement> getCartListOfItems(){
+        return waitUntilElementsToBeClickable(LIST_CART_PRODUCT_ITEM_LI);
     }
 }
 
