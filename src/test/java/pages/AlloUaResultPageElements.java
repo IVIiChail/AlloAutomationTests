@@ -17,6 +17,7 @@ public class AlloUaResultPageElements extends AbstractBasePage {
     public static final String BICYCLES_A = "//li[contains(@class,'portal')]//a[contains(text(),'Велосипеди')]";
     public static final String SMARTPHONES_AND_PHONES_NOKIA_A = "//li[contains(@class,'portal-card')]//a[contains(text(),'Nokia')]";
     public static final String PLAYPENS_A = "//li[contains(@class,'portal')]//a[contains(text(),'Манежі')]";
+    public static final String LIST_RESULTS_WASH_BASINS = "//div[@class='product-card']";
     public WebElement getGuaranteeAndServicePageTitle(){
         return waitUntilElementToBeClickable(GUARANTEE_AND_SERVICE_PAGE_TITLE_H4);
     }
@@ -34,5 +35,8 @@ public class AlloUaResultPageElements extends AbstractBasePage {
     }
     public WebElement getPlaypensBtn() {
         return waitUntilElementToBeClickable(PLAYPENS_A);
+    }
+    public List<WebElement> getListResultsWashBasins() {
+        return waitUntilElementsToBeClickable(LIST_RESULTS_WASH_BASINS);
     }
 }

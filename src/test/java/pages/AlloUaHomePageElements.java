@@ -45,6 +45,8 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public static final String HOUSEHOLD_APP_BTN = "//a[@href='https://allo.ua/ua/bytovaya-tehnika/']";
     public static final String REFRIGERATORS_BTN ="(//a[@href='https://allo.ua/ua/holodilniki/'])[1]";
     public static final String PRODUCT_CONTENT ="//div[@class= 'product-card__content']";
+    public static final String LINK_REPAIR_AND_EQUIPMENT = "//li[@class='mm__item']//a[@href='https://allo.ua/ua/santehnika-i-remont/']";
+    private static final String FIELD_WASH_BASINS = "//a[@href='https://allo.ua/ua/umyval-niki/']";
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
@@ -151,6 +153,16 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public void GoToTelegram(){
         driver.get("https://t.me/allohelp_bot");
+    }
+    public WebElement LinkRepairAndEquipment() {
+        return waitUntilElementToBeClickable(LINK_REPAIR_AND_EQUIPMENT);
+    }
+    public AlloUaHomePageElements moveLinkRepairAndEquipment() {
+        moveCursor(LinkRepairAndEquipment());
+        return this;
+    }
+    public WebElement getFieldWashBasins() {
+        return waitUntilElementToBeClickable(FIELD_WASH_BASINS);
     }
 }
 
