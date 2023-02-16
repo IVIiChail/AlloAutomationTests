@@ -52,6 +52,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String PROFILE_BTN = "//div[contains(@class,'profile')]//button[contains(@class,'mh-button')]";
     private static final String REGISTRATION_BTN = "//li[contains(text(),'Реєстрація')]";
     private static final String LINK_ALLO_EXCHENGE = "//a[@href='https://allo.ua/ua/tradein/']";
+    private static final String PLAYMARKET_ICN ="//a[@class='footer-apps__link footer-apps__link--playmarket']";
     private static final String FACEBOOK_ICN ="//a[@href='https://www.facebook.com/allo']";
     private static final String ALLO_USERNAME ="(//h2[@class='x1heor9g x1qlqyl8 x1pd3egz x1a2a7pz x193iq5w xeuugli'])[1]";
     private static final String LINK_ALLO_MONEY = "//div[@class='mh-links']//a[@href='https://allo.ua/ua/loyalty-program/']";
@@ -201,6 +202,9 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public WebElement getFooterInstagramBtn(){
         return waitUntilElementToBeClickable(FOOTER_INSTAGRAM_A);
+    }
+    public WebElement getDownloadPlMa(){
+        return waitUntilElementToBePresence(PLAYMARKET_ICN);
     }
 }
 
