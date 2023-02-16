@@ -55,6 +55,9 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String PLAYMARKET_ICN ="//a[@class='footer-apps__link footer-apps__link--playmarket']";
     private static final String FACEBOOK_ICN ="//a[@href='https://www.facebook.com/allo']";
     private static final String ALLO_USERNAME ="(//h2[@class='x1heor9g x1qlqyl8 x1pd3egz x1a2a7pz x193iq5w xeuugli'])[1]";
+    private static final String SEARCH_FIELD ="//input[@id='search-form__input']";
+    private static final String SEARCH_BTN ="//button[@class='search-form__submit-button']";
+    private static final String CATALOG_EMPTY ="//p[@class='v-catalog__empty']";
     public static final String TIKTOK_ICN ="//a[@aria-label='tiktok']";
     private static final String TT_ALLOUSER ="//h2[@class='tiktok-t89rw6-H2ShareTitle ekmpd5l5']";
     private static final String LINK_ALLO_MONEY = "//div[@class='mh-links']//a[@href='https://allo.ua/ua/loyalty-program/']";
@@ -205,6 +208,15 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public void goToFacebook(){
         driver.get("https://www.facebook.com/allo");
+    }
+    public WebElement getSearchField(){
+        return waitUntilElementToBeClickable(SEARCH_FIELD);
+    }
+    public WebElement getSearchBtn(){
+        return waitUntilElementToBeClickable(SEARCH_BTN);
+    }
+    public WebElement getCatalogEmpty(){
+        return waitUntilVisibilityOfElementLocated(CATALOG_EMPTY);
     }
     public WebElement getTikTok(){
         return waitUntilElementToBeClickable(TIKTOK_ICN);
