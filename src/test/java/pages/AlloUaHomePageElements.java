@@ -72,8 +72,10 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String LOGIN_SUBMIT_BTN = "//button[contains(@class,'modal-submit-button')]";
     private static final String LOGIN_ERROR_SPAN = "//div[contains(@class,'validation-error')]//span";
     private static final String FIRST_ELEMENT_TOP_SALES_BUY_BTN ="(//div[contains(@class,'buy-box')]//button)[1]";
-    private static final String CART_BTN ="//div[contains(@class,'cart')]//button";
     private static final String LIST_CART_PRODUCT_ITEM_LI ="//div[contains(@class,'products__container')]//li[contains(@class,'list_item')]";
+    private static final String FIRST_ELEMENT_CART_DELETE_SVG ="//*[local-name() = 'svg'][contains(@class,'close remove')][1]";
+    private static final String CART_IS_EMPTY_P ="//div[contains(@class,'popup_empty')]//p[1]";
+
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
@@ -236,7 +238,6 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public WebElement productWireless(){
         return waitUntilVisibilityOfElementLocated(PRODUCT_CARD);
     }
-
     public WebElement getSearchField(){
         return waitUntilElementToBeClickable(SEARCH_FIELD);
     }
@@ -273,14 +274,17 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public WebElement getLoginErrorSpan(){
         return waitUntilElementToBeClickable(LOGIN_ERROR_SPAN);
     }
+    public List<WebElement> getCartListOfItems(){
+        return waitUntilElementsToBeClickable(LIST_CART_PRODUCT_ITEM_LI);
+    }
     public WebElement getFirstElementTopSalesBuyBtn(){
         return waitUntilElementToBeClickable(FIRST_ELEMENT_TOP_SALES_BUY_BTN);
     }
-    public WebElement getCartBtn(){
-        return waitUntilElementToBeClickable(CART_BTN);
+    public WebElement getFirstElementCartDeleteSvg(){
+        return waitUntilElementToBeClickable(FIRST_ELEMENT_CART_DELETE_SVG);
     }
-    public List<WebElement> getCartListOfItems(){
-        return waitUntilElementsToBeClickable(LIST_CART_PRODUCT_ITEM_LI);
+    public WebElement getCartIsEmptyP(){
+        return waitUntilElementToBeClickable(CART_IS_EMPTY_P);
     }
 }
 
