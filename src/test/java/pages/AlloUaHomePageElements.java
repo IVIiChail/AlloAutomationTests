@@ -57,6 +57,10 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String ALLO_USERNAME ="(//h2[@class='x1heor9g x1qlqyl8 x1pd3egz x1a2a7pz x193iq5w xeuugli'])[1]";
     private static final String LINK_ALLO_MONEY = "//div[@class='mh-links']//a[@href='https://allo.ua/ua/loyalty-program/']";
     private static final String FOOTER_INSTAGRAM_A = "//a[contains(@href,'instagram')]";
+    private static final String LOGIN_EMAIL_INPUT = "//input[contains(@id,'auth')]";
+    private static final String LOGIN_PASSWORD_INPUT = "//input[contains(@id,'login-password')]";
+    private static final String LOGIN_SUBMIT_BTN = "//button[contains(@class,'modal-submit-button')]";
+    private static final String LOGIN_ERROR_SPAN = "//div[contains(@class,'validation-error')]//span";
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
@@ -205,6 +209,18 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public WebElement getDownloadPlMa(){
         return waitUntilElementToBePresence(PLAYMARKET_ICN);
+    }
+    public WebElement getLoginEmailInput(){
+        return waitUntilElementToBeClickable(LOGIN_EMAIL_INPUT);
+    }
+    public WebElement getLoginPasswordInput(){
+        return waitUntilElementToBeClickable(LOGIN_PASSWORD_INPUT);
+    }
+    public WebElement getLoginSubmitBtn(){
+        return waitUntilElementToBeClickable(LOGIN_SUBMIT_BTN);
+    }
+    public WebElement getLoginErrorSpan(){
+        return waitUntilElementToBeClickable(LOGIN_ERROR_SPAN);
     }
 }
 
