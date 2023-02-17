@@ -55,6 +55,8 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String PLAYMARKET_ICN ="//a[@class='footer-apps__link footer-apps__link--playmarket']";
     private static final String FACEBOOK_ICN ="//a[@href='https://www.facebook.com/allo']";
     private static final String ALLO_USERNAME ="(//h2[@class='x1heor9g x1qlqyl8 x1pd3egz x1a2a7pz x193iq5w xeuugli'])[1]";
+    public static final String TIKTOK_ICN ="//a[@aria-label='tiktok']";
+    private static final String TT_ALLOUSER ="//h2[@class='tiktok-t89rw6-H2ShareTitle ekmpd5l5']";
     private static final String LINK_ALLO_MONEY = "//div[@class='mh-links']//a[@href='https://allo.ua/ua/loyalty-program/']";
     private static final String FOOTER_INSTAGRAM_A = "//a[contains(@href,'instagram')]";
     private static final String LOGIN_EMAIL_INPUT = "//input[contains(@id,'auth')]";
@@ -203,6 +205,15 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public void goToFacebook(){
         driver.get("https://www.facebook.com/allo");
+    }
+    public WebElement getTikTok(){
+        return waitUntilElementToBeClickable(TIKTOK_ICN);
+    }
+    public void goToTikTok(){
+        driver.get("https://www.tiktok.com/@allo.official");
+    }
+    public WebElement getTTUserAllo(){
+        return waitUntilVisibilityOfElementLocated(TT_ALLOUSER);
     }
     public WebElement getFooterInstagramBtn(){
         return waitUntilElementToBeClickable(FOOTER_INSTAGRAM_A);
