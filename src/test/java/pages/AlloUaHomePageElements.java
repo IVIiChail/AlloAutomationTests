@@ -1,8 +1,6 @@
 package pages;
 
 import base.AbstractBasePage;
-import base.AbstractBaseTest;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -45,6 +43,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String HOUSEHOLD_APP_BTN = "//a[@href='https://allo.ua/ua/bytovaya-tehnika/']";
     private static final String REFRIGERATORS_BTN ="(//a[@href='https://allo.ua/ua/holodilniki/'])[1]";
     private static final String PRODUCT_CONTENT ="//div[@class= 'product-card__content']";
+    private static final String DOWNLOAD_WITH_APPSTORE_A = "//a[contains(@class,'appstore')]";
     private static final String REGISTRATION_EMAIL_INPUT = "//input[contains(@id,'register-email')]";
     private static final String REGISTRATION_PASSWORD_INPUT = "//input[contains(@id,'vregister-password')]";
     private static final String REGISTRATION_SUBMIT_BTN = "//button[contains(@class,'modal-submit-button')]";
@@ -55,6 +54,8 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String LINK_ALLO_EXCHENGE = "//a[@href='https://allo.ua/ua/tradein/']";
     private static final String FACEBOOK_ICN ="//a[@href='https://www.facebook.com/allo']";
     private static final String ALLO_USERNAME ="(//h2[@class='x1heor9g x1qlqyl8 x1pd3egz x1a2a7pz x193iq5w xeuugli'])[1]";
+    private static final String LINK_ALLO_MONEY = "//div[@class='mh-links']//a[@href='https://allo.ua/ua/loyalty-program/']";
+    private static final String FOOTER_INSTAGRAM_A = "//a[contains(@href,'instagram')]";
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
@@ -159,6 +160,12 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public void GoToTelegram(){
         driver.get("https://t.me/allohelp_bot");
     }
+    public WebElement getDownloadWithAppStoreBtn(){
+        return waitUntilElementToBeClickable(DOWNLOAD_WITH_APPSTORE_A);
+    }
+    public WebElement getLinkAlloMoney() {
+        return waitUntilElementToBeClickable(LINK_ALLO_MONEY);
+    }
     public WebElement getProfileBtn(){
         return waitUntilElementToBeClickable(PROFILE_BTN);
     }
@@ -191,6 +198,9 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public void goToFacebook(){
         driver.get("https://www.facebook.com/allo");
+    }
+    public WebElement getFooterInstagramBtn(){
+        return waitUntilElementToBeClickable(FOOTER_INSTAGRAM_A);
     }
 }
 
