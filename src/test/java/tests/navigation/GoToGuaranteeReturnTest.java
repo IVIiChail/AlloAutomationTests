@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.AlloUaHomePageHelper;
 import pages.AlloUaResultPageElements;
 
-public class GoToGuaranteeReturn extends AbstractBaseTest {
+public class GoToGuaranteeReturnTest extends AbstractBaseTest {
 
     @Test
     public void goToGuaranteeReturn(){

@@ -4,9 +4,8 @@ import base.AbstractBaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AlloUaHomePageHelper;
-import pages.AlloUaResultPageElements;
 
-public class SearchZhytomyrCityInChooseCityMenu extends AbstractBaseTest {
+public class SearchZhytomyrCityInChooseCityMenuTest extends AbstractBaseTest {
 
     @Test
     public void goToGuaranteeReturn(){

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.AlloUaHomePageHelper;
 import pages.AlloUaResultPageElements;
 
-public class GetNokiaSmartphonesFromCatalog extends AbstractBaseTest {
+public class GetNokiaSmartphonesFromCatalogTest extends AbstractBaseTest {
 
     @Test
     public void getNokiaSmartphonesFromCatalog(){

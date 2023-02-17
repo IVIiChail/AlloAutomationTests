@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AlloUaHomePageElements;
 
-public class GoToDiscounts  extends AbstractBaseTest {
+public class GoToDiscountsTest extends AbstractBaseTest {
     @Test
     public void goToDiscount(){
         AlloUaHomePageElements allo = new AlloUaHomePageElements(driver);

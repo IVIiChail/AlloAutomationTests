@@ -6,18 +6,19 @@ import org.testng.annotations.Test;
 import pages.AlloUaHomePageHelper;
 import pages.AlloUaResultPageElements;
 
-public class GoToMessenger extends AbstractBaseTest {
+public class GoToBlogTest extends AbstractBaseTest {
 
     @Test
-    public void goToMessenger(){
+    public void goToBlog(){
         AlloUaHomePageHelper alloUaHomePageHelper = new AlloUaHomePageHelper(driver);
         alloUaHomePageHelper.goToHomePage();
 
-        alloUaHomePageHelper.getContactWithUsDropDownBtn().click();
-        alloUaHomePageHelper.getDropDownMessengerBtn().click();
+        alloUaHomePageHelper.getForCustomersDropdownBtn().click();
+        alloUaHomePageHelper.getDropDownBlogBtn().click();
         AlloUaResultPageElements alloUaResultPageElements = new AlloUaResultPageElements(driver);
         alloUaResultPageElements.goToNextTab(2);
 
-        Assert.assertTrue(urlContains("https://www.messenger.com/"));
+        Assert.assertTrue(urlContains("https://blog.allo.ua/ua/golovna/"));
+        Assert.assertEquals(alloUaResultPageElements.getHeaderBlogAlloLogo().getAttribute("alt"),"Блог АЛЛО");
     }
 }

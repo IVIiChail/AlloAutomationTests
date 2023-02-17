@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.AlloUaHomePageHelper;
 import pages.AlloUaResultPageElements;
 
-public class ChooseBicyclesInSportsAndHealth extends AbstractBaseTest {
+public class ChooseBicyclesInSportsAndHealthTest extends AbstractBaseTest {
 
     @Test
     public void chooseBicyclesInSportsAndHealth(){
