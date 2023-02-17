@@ -72,8 +72,15 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String LOGIN_SUBMIT_BTN = "//button[contains(@class,'modal-submit-button')]";
     private static final String LOGIN_ERROR_SPAN = "//div[contains(@class,'validation-error')]//span";
     private static final String FIRST_ELEMENT_TOP_SALES_BUY_BTN ="(//div[contains(@class,'buy-box')]//button)[1]";
-    private static final String CART_BTN ="//div[contains(@class,'cart')]//button";
     private static final String LIST_CART_PRODUCT_ITEM_LI ="//div[contains(@class,'products__container')]//li[contains(@class,'list_item')]";
+    private static final String FIRST_ELEMENT_CART_DELETE_SVG ="//*[local-name() = 'svg'][contains(@class,'close remove')][1]";
+    private static final String CART_IS_EMPTY_P ="//div[contains(@class,'popup_empty')]//p[1]";
+    private static final String COMMUNICATION_BTN_DIV ="//div[contains(@class,'contacts-widget__button')]";
+    private static final String COMMUNICATION_VIBER_BTN_DIV ="//a[contains(@class,'contacts')][contains(@href,'viber')]";
+    private static final String COMMUNICATION_TELEGRAM_BTN_DIV ="//a[contains(@class,'contacts')][contains(@href,'allohelp')]";
+    private static final String COMMUNICATION_MESSENGER_BTN_DIV ="//a[contains(@class,'contacts')][contains(@href,'m.me/allo')]";
+    private static final String COMMUNICATION_PHONE_BTN_DIV ="//a[contains(@class,'contacts')][contains(@href,'tel')]";
+
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
@@ -217,6 +224,12 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public void goToFacebook(){
         driver.get("https://www.facebook.com/allo");
     }
+    public WebElement getCommunicationBtn(){
+        return waitUntilElementToBeClickable(COMMUNICATION_BTN_DIV);
+    }
+    public WebElement getCommunicationViberBtn() {
+        return waitUntilElementToBeClickable(COMMUNICATION_VIBER_BTN_DIV);
+    }
     public WebElement getOfficailRepresent(){
         return waitUntilVisibilityOfElementLocated(OFFICIAL_REPSENT);
     }
@@ -236,7 +249,6 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public WebElement productWireless(){
         return waitUntilVisibilityOfElementLocated(PRODUCT_CARD);
     }
-
     public WebElement getSearchField(){
         return waitUntilElementToBeClickable(SEARCH_FIELD);
     }
@@ -273,15 +285,22 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     public WebElement getLoginErrorSpan(){
         return waitUntilElementToBeClickable(LOGIN_ERROR_SPAN);
     }
-    public WebElement getFirstElementTopSalesBuyBtn(){
-        return waitUntilElementToBeClickable(FIRST_ELEMENT_TOP_SALES_BUY_BTN);
-    }
-    public WebElement getCartBtn(){
-        return waitUntilElementToBeClickable(CART_BTN);
-    }
     public List<WebElement> getCartListOfItems(){
         return waitUntilElementsToBeClickable(LIST_CART_PRODUCT_ITEM_LI);
     }
+    public WebElement getFirstElementTopSalesBuyBtn(){
+        return waitUntilElementToBeClickable(FIRST_ELEMENT_TOP_SALES_BUY_BTN);
+    }
+    public WebElement getCommunicationTelegramBtn(){
+        return waitUntilElementToBeClickable(COMMUNICATION_TELEGRAM_BTN_DIV);
+    }
+    public WebElement getCommunicationMessengerBtn(){
+        return waitUntilElementToBeClickable(COMMUNICATION_MESSENGER_BTN_DIV);
+    }
+    public WebElement getCommunicationPhoneBtn(){
+        return waitUntilElementToBeClickable(COMMUNICATION_PHONE_BTN_DIV);
+    }
+
 }
 
 
