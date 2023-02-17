@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AlloUaHomePageHelper;
 
-public class RegistrationWithInvalidEmailAndPassword extends AbstractBaseTest {
+public class RegistrationWithInvalidEmailAndPasswordTest extends AbstractBaseTest {
 
     @Test
     private void goToDownloadFromAppStore(){

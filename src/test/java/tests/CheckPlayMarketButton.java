@@ -1,18 +1,17 @@
-package tests.navigation;
+package tests;
 
 import base.AbstractBaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AlloUaHomePageElements;
 
-public class GoToHomeByLogo extends AbstractBaseTest {
+public class CheckPlayMarketButton extends AbstractBaseTest {
     @Test
     public void goToHomePageByLogo(){
         AlloUaHomePageElements allo = new AlloUaHomePageElements(driver);
         goToAllo();
-        allo.getDiscountMiddle().click();
-        allo.returnToHomePageByLogo().click();
+        scrollToElement(allo.getDownloadPlMa());
+        Assert.assertTrue(allo.getDownloadPlMa().isEnabled());
 
-        Assert.assertTrue(getUrl().contains("https://allo.ua/"));
-    }
+}
 }
