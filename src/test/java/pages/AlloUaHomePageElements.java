@@ -80,7 +80,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String COMMUNICATION_TELEGRAM_BTN_DIV ="//a[contains(@class,'contacts')][contains(@href,'allohelp')]";
     private static final String COMMUNICATION_MESSENGER_BTN_DIV ="//a[contains(@class,'contacts')][contains(@href,'m.me/allo')]";
     private static final String COMMUNICATION_PHONE_BTN_DIV ="//a[contains(@class,'contacts')][contains(@href,'tel')]";
-    public static final String LINK_DELIVERY_AND_PAYMENT = "//div[@class='mh-button__dropdown']//a[@href='https://allo.ua/ua/help/shipment_payment/']";
+    public static final String LINK_DELIVERY_AND_PAYMENT = "//div[@class='mh-button__dropdown']//a[contains(@href,'shipment_payment')]";
     public static final String HEADER_TITLE_DEL_AND_PAYM = "//h2[@class='sp-page-title sp-h2 page-header']";
 
 
