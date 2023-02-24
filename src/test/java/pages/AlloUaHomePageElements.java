@@ -84,7 +84,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String HEADER_TITLE_DEL_AND_PAYM = "//h2[@class='sp-page-title sp-h2 page-header']";
     private static final String CONTACT_US_BTN = "//span[@class='mh-phone__title']";
     private static final String LINK_VIBER_BTN = "//div[@class='contacts active']//a[@aria-label='Viber']";
-
+    private static final String LINK_ALLO_TELEGRAM = "//a[@href='https://t.me/allonews']";
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
@@ -322,6 +322,10 @@ public class AlloUaHomePageElements extends AbstractBasePage {
         return waitUntilElementToBeClickable(COMMUNICATION_PHONE_BTN_DIV);
     }
 
+
+    public WebElement getLinkAlloTelegram() {
+        return waitUntilElementToBeClickable(LINK_ALLO_TELEGRAM);
+    }
 }
 
 

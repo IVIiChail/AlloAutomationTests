@@ -21,6 +21,7 @@ public class AlloUaResultPageElements extends AbstractBasePage {
     private static final String GET_RESAULT_LINKALLOEXCHANHE = "//div[@class='mh-links']//a[@href='https://allo.ua/ua/tradein/']";
     private static final String INSTAGRAM_ALLO_TITLE_H1 = "//h2";
     private static final String TITLE_ALLO_BOT = "//h1[contains(text(),'ALLO bot')]";
+    private static final String PAGE_LOGO_NAME = "//span[@dir='auto']";
 
     public WebElement getGuaranteeAndServicePageTitle(){
         return waitUntilElementToBeClickable(GUARANTEE_AND_SERVICE_PAGE_TITLE_H4);
@@ -49,5 +50,8 @@ public class AlloUaResultPageElements extends AbstractBasePage {
     }
     public WebElement getTitleAllo_Bot() {
         return waitUntilVisibilityOfElementLocated(TITLE_ALLO_BOT);
+    }
+    public WebElement getLogoLogoName() {
+        return waitUntilElementToBeClickable(PAGE_LOGO_NAME);
     }
 }
