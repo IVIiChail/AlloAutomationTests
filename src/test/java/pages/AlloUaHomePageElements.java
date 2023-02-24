@@ -46,7 +46,7 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String DOWNLOAD_WITH_APPSTORE_A = "//a[contains(@class,'appstore')]";
     private static final String REGISTRATION_EMAIL_INPUT = "//input[contains(@id,'register-email')]";
     private static final String REGISTRATION_PASSWORD_INPUT = "//input[contains(@id,'vregister-password')]";
-    private static final String REGISTRATION_SUBMIT_BTN = "//button[contains(@class,'modal-submit-button')]";
+    private static final String REGISTRATION_SUBMIT_BTN = "//button[contains(@class,'a-button--primary')]";
     private static final String REGISTRATION_ERROR_EMAIL_SPAN = "//div[child::label[contains(text(),'пошта')]]//span";
     private static final String REGISTRATION_ERROR_PHONE_SPAN = "//div[child::label[contains(text(),'Телефон')]]//span";
     private static final String PROFILE_BTN = "//div[contains(@class,'profile')]//button[contains(@class,'mh-button')]";
@@ -66,6 +66,9 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String TIKTOK_ICN ="//a[@aria-label='tiktok']";
     private static final String TT_ALLOUSER ="//h2[@class='tiktok-t89rw6-H2ShareTitle ekmpd5l5']";
     private static final String LINK_ALLO_MONEY = "//div[@class='mh-links']//a[@href='https://allo.ua/ua/loyalty-program/']";
+    private static final String FIELD_RESULT_LOGIN_OPEN = "//span[@class='a-input__message base-message is-error'][1]";
+    private static final String FIED_RESULT_PASSWORD_OPEN = "//*[@id='customer-popup-menu']/div/div[2]/form/div[2]/span";
+    private static final String BTN_FIELD_SENDKEYS_LOGIN_AND_PASSWORD = "//div[@class='auth__enter-password']";
     private static final String SEARCH_FIELD_HOME_PAGE_ALLO = "//input[@id='search-form__input']";
     private static final String BTN_SEARCH_ON_HOME_PAGE_ALLO = "//button[@type='submit']";
     private static final String RESALTS_SEARCH_ELEMENTS_SAMSUNG = "//a[@class='product-card__title']";
@@ -360,6 +363,15 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public WebElement getNameAppGallery() {
         return waitUntilVisibilityOfElementLocated(PAGE_NAME_APP_GALlERY);
+    }
+    public WebElement getField_Result_Login_Open() {
+        return waitUntilVisibilityOfElementLocated(FIELD_RESULT_LOGIN_OPEN);
+    }
+    public WebElement getField_Result_Password_Open() {
+        return waitUntilVisibilityOfElementLocated(FIED_RESULT_PASSWORD_OPEN);
+    }
+    public WebElement getFieldBtnSendkeysLoginAndPassword() {
+        return waitUntilElementToBeClickable(BTN_FIELD_SENDKEYS_LOGIN_AND_PASSWORD);
     }
 }
 
