@@ -80,8 +80,10 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String COMMUNICATION_TELEGRAM_BTN_DIV ="//a[contains(@class,'contacts')][contains(@href,'allohelp')]";
     private static final String COMMUNICATION_MESSENGER_BTN_DIV ="//a[contains(@class,'contacts')][contains(@href,'m.me/allo')]";
     private static final String COMMUNICATION_PHONE_BTN_DIV ="//a[contains(@class,'contacts')][contains(@href,'tel')]";
-    public static final String LINK_DELIVERY_AND_PAYMENT = "//div[@class='mh-button__dropdown']//a[contains(@href,'shipment_payment')]";
-    public static final String HEADER_TITLE_DEL_AND_PAYM = "//h2[@class='sp-page-title sp-h2 page-header']";
+    private static final String LINK_DELIVERY_AND_PAYMENT = "//div[@class='mh-button__dropdown']//a[contains(@href,'shipment_payment')]";
+    private static final String HEADER_TITLE_DEL_AND_PAYM = "//h2[@class='sp-page-title sp-h2 page-header']";
+    private static final String CONTACT_US_BTN = "//span[@class='mh-phone__title']";
+    private static final String LINK_VIBER_BTN = "//div[@class='contacts active']//a[@aria-label='Viber']";
 
 
     public WebElement getGuaranteeReturnBtn(){
@@ -186,6 +188,14 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     }
     public void GoToTelegram(){
         driver.get("https://t.me/allohelp_bot");
+    }
+
+    public WebElement getContact_Us() {
+        return waitUntilElementToBeClickable(CONTACT_US_BTN);
+    }
+
+    public WebElement getLinkViberBtn() {
+        return waitUntilElementToBeClickable(LINK_VIBER_BTN);
     }
 
     public WebElement getLink_Delivery_and_Paymant() {
