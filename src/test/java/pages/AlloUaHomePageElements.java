@@ -69,6 +69,8 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String SEARCH_FIELD_HOME_PAGE_ALLO = "//input[@id='search-form__input']";
     private static final String BTN_SEARCH_ON_HOME_PAGE_ALLO = "//button[@type='submit']";
     private static final String RESALTS_SEARCH_ELEMENTS_SAMSUNG = "//a[@class='product-card__title']";
+    private static final String BTN_DOWNLOAD_APP_GALLERY = "//a[contains(@class,'footer-apps__link--appgallery')]";
+    private static final String PAGE_NAME_APP_GALlERY = "//div[contains(text(),'Алло: тицяй що хочеш')]";
     private static final String FOOTER_INSTAGRAM_A = "//a[contains(@href,'instagram')]";
     private static final String LOGIN_EMAIL_INPUT = "//input[contains(@id,'auth')]";
     private static final String LOGIN_PASSWORD_INPUT = "//input[contains(@id,'login-password')]";
@@ -352,6 +354,12 @@ public class AlloUaHomePageElements extends AbstractBasePage {
 
     public WebElement getFieldSaveGlassOnSmartphones() {
         return waitUntilElementToBeClickable(FIELDSAVEGLASSONSMARPHONES);
+    }
+    public WebElement getBtnDownloadAppGalery() {
+        return waitUntilElementToBeClickable(BTN_DOWNLOAD_APP_GALLERY);
+    }
+    public WebElement getNameAppGallery() {
+        return waitUntilVisibilityOfElementLocated(PAGE_NAME_APP_GALlERY);
     }
 }
 
