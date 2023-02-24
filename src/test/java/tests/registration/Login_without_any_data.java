@@ -12,6 +12,7 @@ public class Login_without_any_data extends AbstractBaseTest {
 
         goToAllo();
         alloUaHomePageElements.getProfileBtn().click();
+        alloUaHomePageElements.getFieldBtnSendkeysLoginAndPassword().click();
         alloUaHomePageElements.getRegistrationSubmitBtn().click();
 
         Assert.assertEquals(alloUaHomePageElements.getField_Result_Login_Open().getText(),"Це поле є обов'язковим для заповнення.");
