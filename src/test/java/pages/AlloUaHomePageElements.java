@@ -88,6 +88,8 @@ public class AlloUaHomePageElements extends AbstractBasePage {
     private static final String CONTACT_US_BTN = "//span[@class='mh-phone__title']";
     private static final String LINK_VIBER_BTN = "//div[@class='contacts active']//a[@aria-label='Viber']";
     private static final String LINK_ALLO_TELEGRAM = "//a[@href='https://t.me/allonews']";
+    private static final String LINKSMARTPHONESANDPHONES = "//li[@class='mm__item']//a[@href='https://allo.ua/ua/mobilnye-telefony-i-sredstva-svyazi/']";
+    private static final String FIELDSAVEGLASSONSMARPHONES = "//a[@href='https://allo.ua/ua/zaschitnye-stekla-k-telefonam/']";
 
     public WebElement getGuaranteeReturnBtn(){
         return waitUntilElementToBeClickable(DROPDOWN_GUARANTY_RETURN_A);
@@ -337,6 +339,19 @@ public class AlloUaHomePageElements extends AbstractBasePage {
 
     public WebElement getLinkAlloTelegram() {
         return waitUntilElementToBeClickable(LINK_ALLO_TELEGRAM);
+    }
+
+    public WebElement getLinkSmartphonesAndPhones() {
+        return waitUntilElementToBeClickable(LINKSMARTPHONESANDPHONES);
+    }
+
+    public AlloUaHomePageElements moveOnLinkSmartphonesAndPhones() {
+        moveCursor(getLinkSmartphonesAndPhones());
+        return this;
+    }
+
+    public WebElement getFieldSaveGlassOnSmartphones() {
+        return waitUntilElementToBeClickable(FIELDSAVEGLASSONSMARPHONES);
     }
 }
 
